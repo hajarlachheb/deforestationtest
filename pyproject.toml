@@ -1,0 +1,88 @@
+# Poetry pyproject.toml: https://python-poetry.org/docs/pyproject/
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "fsdl_deforestation_detection"
+version = "0.1.0"
+description = "Predicting deforestation from Satellite Images. Final Project for Full Stack Deep Learning. Authors Karthik Bhaskar and Andre Ferreira"
+readme = "README.md"
+authors = [
+  "fsdl_deforestation_detection <karthikrajabk@gmail.com>"
+]
+license = "MIT"
+repository = "https://github.com/karthikraja95/fsdl_deforestation_detection"
+homepage = "https://github.com/karthikraja95/fsdl_deforestation_detection"
+
+# Keywords description https://python-poetry.org/docs/pyproject/#keywords
+keywords = []  # Update me
+
+# Pypi classifiers: https://pypi.org/classifiers/
+classifiers = [  # Update me
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.scripts]
+# Entry points for the package https://python-poetry.org/docs/pyproject/#scripts
+"fsdl_deforestation_detection" = "fsdl_deforestation_detection.__main__:app"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+importlib_metadata = {version = "^3.9.1", python = "<3.8"}
+typer = {extras = ["all"], version = "^0.3.2"}
+rich = "^10.0.0"
+pytorch-lightning = "^1.2.5"
+torchsat = "^0.0.1"
+streamlit = "^0.82.0"
+tensorflow = "^2.4.1"
+wandb = "^0.10.23"
+plotly = "^4.14.3"
+mlflow = "^1.15.0"
+pydocstyle = "^6.0.0"
+ipykernel = "^5.5.3"
+kaggle = "^1.5.12"
+ipywidgets = "^7.6.3"
+scikit-image = "^0.18.1"
+tensorflow-hub = "^0.12.0"
+tensorflow-addons = "^0.12.1"
+watchdog = "^2.0.2"
+fastai = "2.2.5"
+colorlover = "^0.3.0"
+torchviz = "^0.0.2"
+google-cloud-storage = "^1.38.0"
+pandas-gbq = "^0.15.0"
+
+[tool.poetry.dev-dependencies]
+darglint = "^1.5.8"
+isort = "^5.7.0"
+pyupgrade = "^2.7.4"
+black = "^20.8b1"
+mypy = "^0.812"
+bandit = "^1.7.0"
+safety = "^1.10.3"
+pytest = "^6.2.1"
+pylint = "^2.6.0"
+pydocstyle = "^6.0.0"
+pre-commit = "^2.9.3"
+
+[tool.black]
+# https://github.com/psf/black
+line-length = 80
+target-version = ["py37"]
+
+[tool.isort]
+# https://github.com/timothycrosley/isort/
+known_typing = "typing,types,typing_extensions,mypy,mypy_extensions"
+sections = "FUTURE,TYPING,STDLIB,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
+include_trailing_comma = true
+default_section = "FIRSTPARTY"
+multi_line_output = 3
+indent = 4
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 80
